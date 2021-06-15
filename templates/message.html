@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title> message board</title>
+</head>
+<body>
+<div class="row">
+  <div class="col">
+    <form method="POST" action="{{url_for('submit')}}">
+        <div class="form-row">
+            <div class="col-12 mt-3">
+                <input type="text" class="form-control" name="name"
+                       placeholder="name">
+            </div>
+            <div class="col-12 mt-3">
+                <input type="text" class="form-control" name="text"
+                       placeholder="text here">
+            </div>
+            <div class="col-12 mt-3 pt-3">
+                <button type="submit" class="btn btn-primary">submit
+                </button>
+            </div>
+        </div>
+    <div>
+        目前的留言板
+        (次序,名字,內容)
+        <table border="1" width="400" cellpadding="5">
+        <u1>
+        {% for i in data %}
+        <li>{{i}}</li>
+        {% endfor %}
+        </u1>
+            </table>
+    </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
